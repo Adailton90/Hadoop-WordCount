@@ -1,0 +1,39 @@
+Tutorial https://clubhouse.io/developer-how-to/how-to-set-up-a-hadoop-cluster-in-
+docker/
+
+
+Comandos para subir o docker
+docker run -d -p 80:80 --name myserver nginx
+
+docker-compose up -d -> Sobe
+ docker-compose down -> desce o docker
+docker ps -> Lista os dockers
+ docker exec -it namenode bash -> Entra no docker namenode
+docker container ls -> Mostra os dockers
+
+Comandos dentro do docker
+
+mkdir input -> Cria uma pasta no Docker 
+echo "Hello World" >input/f1.txt -> Cria e escreve palavras em um arquivo no diretorio criado
+echo "Hello Docker" >input/f2.txt
+
+
+Comandos Hadoop
+
+hadoop fs -mkdir -p input -> Cria uma pasta chamada input
+hdfs dfs -put ./input/* input -> Copia todos os arquivos da pasta input do docker para o hdfs do hadoop
+
+docker cp ../hadoop-mapreduce-examples-2.7.1-sources.jar cb0c13085cd3:hadoop-mapreduce-examples-2.7.1-sources.jar -> Copia o arquivo jar do docker para dentro do hadoop
+
+hadoop jar hadoop-mapreduce-examples-2.7.1-sources.jar org.apache.hadoop.examples.WordCount input output -> Roda o programa no hadoop
+
+ hdfs dfs -cat output/part-r-00000 - > mostra a saida
+
+hadoop fs -rm /user/root/input/file.txt -> remove um arquivo da pasta input
+hadoop fs -rm /user/root/output/file.txt -> remove um arquivo da pasta output
+
+hadoop fs -rmdir /user/root/output/ -> remove um diretorio da pasta output
+hadoop fs -mkdir /user/root/output/ -> cria um diretorio da pasta output
+hadoop fs -ls /user/root/output -> exibe o que tem na pasta
+
+Hadoop fs -rm -r /user/ root/output 
