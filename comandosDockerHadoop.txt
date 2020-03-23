@@ -13,11 +13,6 @@ docker ps -> Lista os dockers
  docker exec -it namenode bash -> Entra no docker namenode
 docker container ls -> Mostra os dockers
 
-Comandos dentro do docker
-
-mkdir input -> Cria uma pasta no Docker 
-echo "Hello World" >input/f1.txt -> Cria e escreve palavras em um arquivo no diretorio criado
-echo "Hello Docker" >input/f2.txt
 
 
 Comandos Hadoop
