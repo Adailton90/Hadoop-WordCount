@@ -1,0 +1,46 @@
+Tutorial https://clubhouse.io/developer-how-to/how-to-set-up-a-hadoop-cluster-in-
+docker/
+
+https://www.edureka.co/blog/hadoop-streaming-mapreduce-program/
+
+http://www.science.smith.edu/dftwiki/index.php/Hadoop_Tutorial_2_--_Running_WordCount_in_Python
+
+
+
+docker-compose up -d -> Sobe
+ docker-compose down -> desce o docker
+docker ps -> Lista os dockers
+ docker exec -it namenode bash -> Entra no docker namenode
+docker container ls -> Mostra os dockers
+
+Comandos dentro do docker
+
+mkdir input -> Cria uma pasta no Docker 
+echo "Hello World" >input/f1.txt -> Cria e escreve palavras em um arquivo no diretorio criado
+echo "Hello Docker" >input/f2.txt
+
+
+Comandos Hadoop
+
+
+
+
+diretorio straeming-jar
+/opt/hadoop-3.2.1/share/hadoop/tools/lib/hadoop-streaming-3.2.1.jar
+
+diretorio map
+/testHadoop/mapper.py
+
+diretorio reducer
+/testHadoop/reducer.py
+
+hadoop jar /opt/hadoop-3.2.1/share/hadoop/tools/lib/hadoop-streaming-3.2.1.jar -file /testHadoop/mapper.py -mapper mapper.py -file /testHadoop/reducer.py -reducer reducer.py -input /user/root/input -output /user/root/output
+
+
+
+
+
+
+hadoop jar /opt/hadoop-3.2.1/share/hadoop/tools/lib/hadoop-streaming-3.2.1.jar -file ./mapper.py -mapper ./mapper.py -file ./reducer.py -reducer ./reducer.py  -input /user/root/input -output /user/root/output
+
+
