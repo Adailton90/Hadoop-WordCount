@@ -1,3 +1,8 @@
+org.apache.hadoop.examples
+org.apache.hadoop.examples.wordCount2
+
+
+
 Tutorial https://clubhouse.io/developer-how-to/how-to-set-up-a-hadoop-cluster-in-
 docker/
 
@@ -7,15 +12,7 @@ http://www.science.smith.edu/dftwiki/index.php/Hadoop_Tutorial_2_--_Running_Word
 
 
 
-docker-compose up -d -> Sobe
- docker-compose down -> desce o docker
-docker ps -> Lista os dockers
- docker exec -it namenode bash -> Entra no docker namenode
-docker container ls -> Mostra os dockers
-
-git clone https://github.com/Adailton90/testHadoop.git
-
-Comandos Hadoop
+docker exec -it namenode bash
 
 
 
