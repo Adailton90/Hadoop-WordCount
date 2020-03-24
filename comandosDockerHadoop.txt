@@ -33,7 +33,7 @@ hadoop jar /opt/hadoop-3.2.1/share/hadoop/tools/lib/hadoop-streaming-3.2.1.jar -
 
 
 
-
+hadoop jar /opt/hadoop-3.2.1/share/hadoop/tools/lib/hadoop-streaming-3.2.1.jar -file /testHadoop/mapper.py -mapper /testHadoop/mapper.py -file /testHadoop/reducer.py -reducer /testHadoop/reducer.py -input /user/root/input -output /user/root/output
 
 
 
