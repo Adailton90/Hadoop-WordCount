@@ -1,5 +1,5 @@
 org.apache.hadoop.examples
-org.apache.hadoop.examples.wordCount2
+org.apache.hadoop.examples.wordCount3
 
 
 
@@ -34,7 +34,7 @@ hadoop jar /opt/hadoop-3.2.1/share/hadoop/tools/lib/hadoop-streaming-3.2.1.jar -
 
 
 
-
+hadoop jar original-wordcountjava-1.0-SNAPSHOT.jar org.apache.hadoop.examples.WordCount input output
 
 
 
