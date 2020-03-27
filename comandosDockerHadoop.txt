@@ -1,7 +1,8 @@
 
 org.apache.hadoop.examples.WordCount
 
-hhadoop jar wordcountjava-1.0-SNAPSHOT.jar org.apache.hadoop.examples.WordCount input output
+hdfs dfs -put ./input/* input
+hadoop jar wordcountjava-1.0-SNAPSHOT.jar org.apache.hadoop.examples.WordCount input output
 hdfs dfs -ls output
 hdfs dfs -cat output/part-r-00000
 
