@@ -1,18 +1,9 @@
-org.apache.hadoop.examples
-org.apache.hadoop.examples.wordCount3
 
+org.apache.hadoop.examples.WordCount
 
-
-Tutorial https://clubhouse.io/developer-how-to/how-to-set-up-a-hadoop-cluster-in-
-docker/
-
-https://www.edureka.co/blog/hadoop-streaming-mapreduce-program/
-
-http://www.science.smith.edu/dftwiki/index.php/Hadoop_Tutorial_2_--_Running_WordCount_in_Python
-
-
-
-docker exec -it namenode bash
+hhadoop jar wordcountjava-1.0-SNAPSHOT.jar org.apache.hadoop.examples.WordCount input output
+hdfs dfs -ls output
+hdfs dfs -cat output/part-r-00000
 
 
 
